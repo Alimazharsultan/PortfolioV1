@@ -1,0 +1,107 @@
+@import "../../global.scss";
+/* Style inputs, select elements and textareas */
+
+.footer{
+  font-size: 24px;
+  text-align: center;
+  background-color: yellowgreen;
+}
+.contact {
+  background-color: rgb(6, 187, 127);
+  display: flex;
+  align-items: center;
+  width: 100vw;
+
+  @include mobile{
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+  }
+
+  .left {
+    align-items: center;
+    flex: 1;
+    overflow: hidden;
+
+    @include mobile{
+      flex-direction: column;
+      align-items: center;
+      width: 100vw;
+    }
+  }
+  .right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    h2 {
+      font-size: 30px;
+    }
+    .contactHeader{
+      left: 50%;
+      width: 100wh;
+      background-color: white;
+    }
+    h1 {
+      width: 100%;
+      font-size: 50px;
+      text-align: center;
+      padding: 4px;
+      @include mobile{
+        font-size: 30px;
+      }
+    }
+  
+    form {
+      width: 70%;
+      height: 70%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+
+      input {
+        width: 300px;
+        height: 30px;
+        font-size: 14px;
+
+        @include mobile {
+          width: 200px;
+          height: 20px;
+        }
+      }
+
+      textarea {
+        width: 300px;
+        height: 200px;
+        font-size: 14px;
+
+        @include mobile {
+          width: 200px;
+          height: 100px;
+        }
+      }
+
+      button {
+        width: 150px;
+        height: 30px;
+        color: white;
+        background-color: crimson;
+        border: none;
+        border-radius: 10px;
+        font-weight: 500;
+        cursor: pointer;
+
+        &:focus {
+          outline: none;
+        }
+      }
+
+      span {
+        color: green;
+      }
+    }
+  }
+}

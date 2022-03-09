@@ -1,0 +1,33 @@
+body::-webkit-scrollbar{
+    width: 8px;
+}
+body::-webkit-scrollbar-thumb{
+    background-color: #0056d898;
+    border-radius: 50px;
+}
+body::-webkit-scrollbar-track{
+    background-color: #777;
+}
+
+.app{
+    height: 100vh;
+    width: 100vw;
+    background-color: #0c173f;
+    
+    .sections{
+        width: 100%;
+        height: calc(100vh - 70px);
+        background-color: lightsalmon;
+        position: relative;
+        top: 70px;
+        scroll-behavior: smooth;
+        scroll-snap-type: y mandatory;
+        
+
+        > *{
+            width: 100vw;
+            height: calc(100vh - 70px);
+            scroll-snap-align: start;
+        }
+    }
+}
